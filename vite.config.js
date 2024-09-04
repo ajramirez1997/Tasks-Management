@@ -11,8 +11,8 @@ export default defineConfig({
             refresh: true,        
         }),
     ],    
-    build: {
-        manifest: true,        
+    build: { 
         outDir: 'public/build',
+        manifest: true,       
     },
 });
