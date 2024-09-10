@@ -4,19 +4,27 @@ How to Install
 Follow these steps to install and run the Task Management project: 
 
 Clone the Repository:
-git clone <repository-url>
+git clone repository-url
 
-Replace <repository-url> with the link to the repository. This step gets the project files onto your local machine.
+Replace repository-url with the link to the repository. This step gets the project files onto your local machine.
 
 Go to the Project Folder:
-cd <project-directory>
+cd project-directory
 
-Replace <project-directory> with the name of the folder that was created when you cloned the repo.
+Replace project-directory with the name of the folder that was created when you cloned the repo.
+
+Run this command to get install Dependencies:
+composer update
+npm install
+
+After installing the dependencies run this command.
+npm run build
+ 
 
 Set Up the Database:
 php artisan migrate
 
-This command will create all the necessary tables in your database. Make sure your database configuration is set up correctly in your .env file.
+This command will create all the necessary tables in your database. Make sure your database configuration is set up correctly in your .env file or .env.example to .env.
 
 Launch the Project:
 php artisan serve
