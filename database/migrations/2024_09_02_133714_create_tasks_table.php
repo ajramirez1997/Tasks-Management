@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->bigInteger('main_task_id')->index();
+            $table->bigInteger('main_task_id')->index()->nullable();
             $table->string('title', 100)->unique();
             $table->longText('content');
             $table->enum('status', ['to-do', 'in-progress', 'done']);
             $table->enum('is_draft', ['0', '1']);
-            $table->string('images');
+            $table->string('images')->nullable();
             $table->timestamps();
         });
     }
